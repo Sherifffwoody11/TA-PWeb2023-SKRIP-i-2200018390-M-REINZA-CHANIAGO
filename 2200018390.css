@@ -1,0 +1,31 @@
+.atas{ 
+    background-color:red;
+    font-family: Arial;
+}
+.kiri{ 
+    height: 0px;
+    text-align: left;
+    float: left;
+}
+.Main{ 
+    width: 85%;
+    float: right;
+    margin-top: 1px;
+    margin-left: 10px;
+    font-family: Arial;
+}
+.foto{ 
+    width: 25%;
+    margin-top: 15px;
+	margin-left: 50px;
+}
+.foter { 
+    background-color: gold;
+    width: 100%;
+    float: left;
+    font-family: Arial;
+}
+.tulisan{ 
+    width: 100%;
+    text-align: center;
+}
