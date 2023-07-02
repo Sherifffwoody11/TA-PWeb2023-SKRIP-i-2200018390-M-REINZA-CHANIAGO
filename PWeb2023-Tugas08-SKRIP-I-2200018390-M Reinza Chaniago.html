@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Biodata Diri Mahasiswa</title>
+    <style> 
+        body {
+            background-color: violet;
+        }
+    </style>
+    <link rel="stylesheet" href="Tugas 6.css"> 
+</head>
+
+<body>
+    
+    <script>
+function showBiodata() {
+    var nama = document.getElementById("nama").value;
+    var nim = document.getElementById("nim").value;
+    var jenisKelamin = document.getElementById("jenisKelamin").value;
+    var tempatLahir = document.getElementById("tempatLahir").value;
+    var tanggalLahir = document.getElementById("tanggalLahir").value;
+    var agama = document.getElementById("agama").value;
+    var hobi = document.getElementById("hobi").value;
+    var noHp = document.getElementById("noHp").value;
+    var fakultas = document.getElementById("fakultas").value;
+    var prodi = document.getElementById("prodi").value;
+
+    // Validasi input
+    if (nama.trim() === '') {
+        alert('Nama harus diisi');
+        return;
+    }
+    if (nim.trim() === '') {
+        alert('NIM harus diisi');
+        return;
+    }
+    if (!/^\d+$/.test(nim)) {
+        alert('NIM harus berupa angka');
+        return;
+    }
+    if (jenisKelamin.trim() === '') {
+        alert('Jenis Kelamin harus diisi');
+        return;
+    }
+    if (tempatLahir.trim() === '') {
+        alert('Tempat Lahir harus diisi');
+        return;
+    }
+    if (tanggalLahir.trim() === '') {
+        alert('Tanggal Lahir harus diisi');
+        return;
+    }
+    if (agama.trim() === '') {
+        alert('Agama harus diisi');
+        return;
+    }
+    if (hobi.trim() === '') {
+        alert('Hobi harus diisi');
+        return;
+    }
+    if (noHp.trim() === '') {
+        alert('Nomor HP harus diisi');
+        return;
+    }
+    if (!/^\d+$/.test(noHp)) {
+        alert('Nomor HP harus berupa angka');
+        return;
+    }
+    if (fakultas.trim() === '') {
+        alert('Fakultas harus diisi');
+        return;
+    }
+    if (prodi.trim() === '') {
+        alert('Program Studi harus diisi');
+        return;
+    }
+    
+    var biodataOutput = document.getElementById("biodataOutput");
+    biodataOutput.innerHTML = "<h1>PROFILE</h1>" +
+        "<h3>Nama                  : " + nama + "</h3>" +
+        "<h3>NIM                   : " + nim + "</h3>" +
+        "<h3>Jenis Kelamin         : " + jenisKelamin + "</h3>" +
+        "<h3>Tempat, Tanggal Lahir : " + tempatLahir + ", " + tanggalLahir + "</h3>" +
+        "<h3>Agama                 : " + agama + "</h3>" +
+        "<h3>Hobi                  : " + hobi + "</h3>" +
+        "<h3>NO HP                 : " + noHp + "</h3>" +
+        "<h3>Fakultas              : " + fakultas + "</h3>" +
+        "<h3>Prodi                 : " + prodi + "</h3>";
+}
+    </script>
+    
+    <form>
+        <div class="atas">
+            <h1><center>BIODATA DIRI MAHASISWA</center></h1>
+        </div>
+        <div class="kiri">
+            <h5><img class="foto" src="REINZA.jpeg"></h5>   
+        </div> 
+
+        <div class="Main">
+            <br>
+            <h1>PROFILE</h1>
+            <div>
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" required>
+            </div>
+            <div>
+                <label for="nim">NIM:</label>
+                <input type="text" id="nim" required>
+            </div>
+            <div>
+                <label for="jenisKelamin">Jenis Kelamin:</label>
+                <input type="text" id="jenisKelamin" required>
+            </div>
+            <div>
+                <label for="tempatLahir">Tempat Lahir:</label>
+                <input type="text" id="tempatLahir" required>
+            </div>
+            <div>
+                <label for="tanggalLahir">Tanggal Lahir:</label>
+                <input type="text" id="tanggalLahir" required>
+            </div>
+            <div>
+                <label for="agama">Agama:</label>
+                <input type="text" id="agama" required>
+            </div>
+            <div>
+                <label for="hobi">Hobi:</label>
+                <input type="text" id="hobi" required>
+            </div>
+            <div>
+                <label for="noHp">NO HP:</label>
+                <input type="text" id="noHp" required>
+            </div>
+            <div>
+                <label for="fakultas">Fakultas:</label>
+                <input type="text" id="fakultas" required>
+            </div>
+            <div>
+                <label for="prodi">Prodi:</label>
+                <input type="text" id="prodi" required>
+            </div>
+            <br>
+            <button type="button" onclick="showBiodata()">Tampilkan Biodata</button>
+            <br><br><br>
+            <div id="biodataOutput"></div>
+        </div>
+        <div class="foter">
+            <div class="tulisan"><h1>M REINZA CHANIAGO - 2200018390</h1></div>
+        </div>
+    </form>
+</body>
+</html>
